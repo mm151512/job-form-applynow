@@ -14,11 +14,11 @@ cloudinary.config({
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.resolve(__dirname, 'public')));
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
 function getNextCount() {
