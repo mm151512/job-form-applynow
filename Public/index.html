@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8" >
+    <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="px-6 py-8">
+            <h2 class="text-2xl font-bold text-center text-gray-900 mb-8">Job Application Form</h2>
+            <form id="jobApplicationForm" action="/upload" method="POST" enctype="multipart/form-data" class="space-y-6">
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" name="name" id="name" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" name="email" id="email" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
+                        <input type="tel" name="phone" id="phone" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+                        <input type="date" name="dob" id="dob" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                        <textarea name="address" id="address" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                    </div>
+                    <div>
+                        <label for="employment_status" class="block text-sm font-medium text-gray-700">Current Employment Status</label>
+                        <select name="employment_status" id="employment_status" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="">Select status</option>
+                            <option value="employed">Employed</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="self-employed">Self-employed</option>
+                            <option value="student">Student</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="work_experience" class="block text-sm font-medium text-gray-700">Work Experience (years)</label>
+                        <input type="number" name="work_experience" id="work_experience" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="academic_grade" class="block text-sm font-medium text-gray-700">Academic Grade</label>
+                        <select name="academic_grade" id="academic_grade" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="">Select grade</option>
+                            <option value="high_school">High School</option>
+                            <option value="associate">Associate's Degree</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
+                            <option value="doctorate">Doctorate</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+                        <select name="gender" id="gender" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                            <option value="prefer_not_to_say">Prefer not to say</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ssn" class="block text-sm font-medium text-gray-700">SSN</label>
+                        <input type="text" name="ssn" id="ssn" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="work_type" class="block text-sm font-medium text-gray-700">Work Type</label>
+                        <select name="work_type" id="work_type" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="">Select work type</option>
+                            <option value="onsite">Onsite</option>
+                            <option value="remote">Remote</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="hours_per_week" class="block text-sm font-medium text-gray-700">Hours worked per week</label>
+                        <input type="number" name="hours_per_week" id="hours_per_week" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="same_hours" class="block text-sm font-medium text-gray-700">Can you work the same hours?</label>
+                        <select name="same_hours" id="same_hours" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="">Select option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="last_job_pay" class="block text-sm font-medium text-gray-700">Last job pay (per hour)</label>
+                        <input type="number" name="last_job_pay" id="last_job_pay" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="accept_same_pay" class="block text-sm font-medium text-gray-700">Willing to accept same amount?</label>
+                        <select name="accept_same_pay" id="accept_same_pay" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="">Select option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="authorized_to_work" class="block text-sm font-medium text-gray-700">Authorized to work?</label>
+                        <select name="authorized_to_work" id="authorized_to_work" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="">Select option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="payment_method" class="block text-sm font-medium text-gray-700">Preferred payment method</label>
+                        <select name="payment_method" id="payment_method" required="" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="">Select payment method</option>
+                            <option value="bank">Bank transfer</option>
+                            <option value="check">Check</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label for="license_front" class="block text-sm font-medium text-gray-700">Upload front of driver's license</label>
+                        <input type="file" name="license_front" id="license_front" accept="image/*" required="" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100">
+                    </div>
+                    <div>
+                        <label for="license_back" class="block text-sm font-medium text-gray-700">Upload back of driver's license</label>
+                        <input type="file" name="license_back" id="license_back" accept="image/*" required="" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100">
+                    </div>
+                    <div>
+                        <label for="selfie" class="block text-sm font-medium text-gray-700">Upload your selfie</label>
+                        <input type="file" name="selfie" id="selfie" accept="image/*" required="" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100">
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Submit Application
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
